@@ -1,18 +1,25 @@
 Persistent Library Management System (C++)
 
-This is a full-scale Library Management System (LMS) designed with an emphasis on Software Architecture and Data Integrity. It moves beyond simple CRUD operations by implementing persistent storage, transactional logic for waitlists, and rigorous input validation engines.
+This is a full-scale Library Management System (LMS) designed with an emphasis on Software Architecture and Data Integrity.
+It moves beyond simple CRUD operations by implementing persistent storage, transactional logic for waitlists,
+and rigorous input validation engines.
 
-- Singleton Design Pattern: Implemented a centralized Database controller to ensure a "Single Source of Truth" across the application lifecycle.
+- Singleton Design Pattern: Implemented a centralized Database controller to ensure a
+"Single Source of Truth" across the application lifecycle.
 
-- Persistence Layer: Custom file-handling logic that synchronizes objects (Books, Users, Waitlists) with flat-file databases (.txt), ensuring data survives application restarts.
+- Persistence Layer: Custom file-handling logic that synchronizes objects (Books, Users, Waitlists) with flat-file 
+databases (.txt), ensuring data survives application restarts.
 
-- The Erase-Remove Idiom: Utilizes modern C++ std::remove_if with Lambda Expressions for high-performance collection filtering.
+- The Erase-Remove Idiom: Utilizes modern C++ std::remove_if with Lambda Expressions for high-performance 
+collection filtering.
 
 - ISBN-13 Integrity: Implemented the Weighted Modulus 10 algorithm to mathematically verify ISBNs before entry.
 
-- Fail-Safe Input Handling: Developed a custom stringstream parser for std::cin to prevent buffer overflows and infinite loop crashes—ensuring a "bulletproof" user interface.
+- Fail-Safe Input Handling: Developed a custom stringstream parser for std::cin to prevent buffer overflows and 
+infinite loop crashes—ensuring a "bulletproof" user interface.
 
-- Time-Series Penalties: Integrated <ctime> for real-time calculation of late fees based on Unix timestamps and daily differentials.
+- Time-Series Penalties: Integrated <ctime> for real-time calculation of late fees based on Unix timestamps 
+and daily differentials.
 
 Book.CPP & Book.h
 
