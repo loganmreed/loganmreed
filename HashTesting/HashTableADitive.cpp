@@ -154,7 +154,7 @@ public:
     }
 };
 
-// ---------- MENU FUNCTIONS ----------
+
 void showMenu() {
     std::cout << "====================================\n"
               << "          HASH TABLE PROGRAM         \n"
@@ -191,7 +191,7 @@ int getValidIntInput(int min, int max) {
     }
 }
 
-// ---------- MAIN ----------
+
 int main() {
     HashTable ht;
     bool running = true;
@@ -252,3 +252,4 @@ int main() {
     }
     return 0;
 }
+
