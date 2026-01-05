@@ -22,7 +22,7 @@ infinite loop crashes—ensuring a "bulletproof" user interface.
 and daily differentials.
 
 Book.CPP & Book.h
-
+```text
 +--------------------------------+
 |            Book                |
 +--------------------------------+
@@ -53,7 +53,7 @@ Book.CPP & Book.h
 | + calculateLateFee(): double   |
 | + checkLateFees()              |
 +--------------------------------+
-
+```
 Notes:
 - `Book format` is an enumeration enum class `Hardback, Paperback, eBook, Audiobook, Magazine`
 
@@ -62,7 +62,7 @@ Notes:
 - `dueDate` is a type `time_t` to store the due date.
 
 Database.CPP & Database.h
-
+```text
 +------------------------------------------------+
 |                 Database                      |
 +------------------------------------------------+
@@ -116,12 +116,12 @@ Database.CPP & Database.h
 | + getBorrowHistory(): std::vector<std::string> |
 | ~Database()                                   |
 +------------------------------------------------+
-
+```
 Notes:
 - Singleton Pattern: with `static Database* instance` and `getInstance()`.
 
 main.cpp & main.h
-
+```text
 +-----------------------------------+
 |              Main                 |
 +-----------------------------------+
@@ -148,12 +148,13 @@ main.cpp & main.h
 | + toLowerCase(str: std::string): std::string |
 | + searchBooksByAuthor(): void     |
 +-----------------------------------+
-
+```
 Notes:
 - ANSI Escape Codes: to make the outputs more readable.
 
 User.cpp & user.h
 
+```text
 +---------------------------------------------------+
 |                      User                         |
 +---------------------------------------------------+
@@ -185,6 +186,7 @@ User.cpp & user.h
 | + setSubject(subject: std::string): void          |
 | + displayInfo(): void                             |
 +---------------------------------------------------+
+```
 
 Notes 
 
