@@ -1,0 +1,322 @@
+:root {
+    --animation-duration: 0.3s; /* Increased duration */
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+    perspective: 1000px;
+}
+
+.game-container {
+    z-index: -2;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(135deg, #03393d, #b801a5); /* Smooth gradient */
+    background-size: 400% 400%; /* For dynamic effect */
+    animation: gradientMove 15s ease infinite; /* Animated gradient */
+    overflow: hidden;
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.1); /* Soft inner shadow */
+}
+
+/* Keyframes for gradient animation */
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.floor {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 7%;
+    background: linear-gradient(180deg, #654321, #4e2a18);
+    /*transform: translateZ(0) scale(1.5);*/
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.character {
+    position: absolute;
+    transform-origin: center;
+    bottom: 10%;
+    left: 20%;
+    width: 8vh; /* 8% of viewport height */
+    height: 13vh; /* 13% of viewport height */
+    transform: translateX(-50%) translateZ(1px) rotateY(45deg);
+    transform-style: preserve-3d;
+    transition: transform var(--animation-duration) ease-in-out, bottom var(--animation-duration) ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black; /* Added border property */
+}
+
+.head, .body, .arm, .leg {
+    transition: transform var(--animation-duration) ease-in-out; /* Smooth transition for all parts */
+}
+
+.head {
+    width: 60%; /* 60% of .character width */
+    height: 30%; /* 30% of .character height */
+    background-color: #148305;
+    border-radius: 50%;
+    margin-bottom: 1%;
+    border: 1px solid black;
+}
+
+.body {
+    width: 60%; /* 60% of .character width */
+    height: 40%; /* 40% of .character height */
+    background-color: #000000;
+    margin-bottom: 2%;
+    border: 1px solid black;
+}
+
+.arm {
+    width: 14%; /* 14% of .character width */
+    height: 25%; /* 25% of .character height */
+    background-color: #148305;
+    position: absolute;
+    top: 35%; /* 35% of .character height */
+    border: 1px solid black;
+}
+
+.left-arm {
+    left: 4%;
+    transform: rotate(35deg);
+    transform-origin: top;
+}
+
+.right-arm {
+    right: 4%;
+    transform: rotate(-30deg);
+    transform-origin: top;
+}
+
+.leg {
+    width: 20%; /* 20% of .character width */
+    height: 27%; /* 27% of .character height */
+    background-color: #21669e;
+    position: absolute;
+    bottom: 0;
+    border: 1px solid black;
+}
+
+.left-leg {
+    left: 10%;
+    transform-origin: top;
+    box-shadow: 5px 15px 15px rgba(0, 0, 0, 0.5);
+}
+
+.right-leg {
+    right: 10%;
+    transform-origin: top;
+    box-shadow: 5px 15px 15px rgba(0, 0, 0, 0.5);
+}
+
+.box {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background-color: #406521;
+    border: 1px solid #000000;
+    transition: background-color 0.3s ease;
+    box-shadow: 5px 4px 6px rgba(0, 0, 0, 0.7);
+}
+
+.non-climbable {
+    background-color: red; /* Makes the box red when it's not climbable */
+    box-shadow: 5px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.key {
+    position: absolute;
+    width: 10%; /* Restricts the width of the key box */
+    height: 13%;
+    background-color: #ff6600;  /* Bright gold color */
+    border: 1px solid #000000;  /* Bold black border for the cartoon effect */
+    bottom: 7%;
+    right: 50%;
+    transform-origin: right;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);  /* Add some shadow for depth */
+    z-index: -1;
+
+    /* Text-specific styles */
+    display: flex;                /* Enables flexible layout for alignment */
+    align-items: center;          /* Centers text vertically */
+    justify-content: center;      /* Centers text horizontally */
+    text-align: center;           /* Ensures multiline text is centered */
+    color: black;                 /* Text color */
+    font-size: 1.3rem;            /* Adjust font size to fit */
+    padding: 5px;      
+    font-family: Georgia, 'Times New Roman', Times, serif;/* Adds space around the text */
+    box-sizing: border-box;       /* Ensures padding doesn't affect width/height */
+    word-wrap: break-word;        /* Ensures long words break inside the box */
+    overflow: hidden;             /* Prevents text from spilling out */
+}
+
+.keytwo {
+    position: absolute;
+    width: 10%; /* Restricts the width of the key box */
+    height: 13%;
+    background-color: #ff3300;  /* Bright gold color */
+    border: 1px solid #000000;  /* Bold black border for the cartoon effect */
+    bottom: 29%;
+    right: 50%;
+    transform-origin: right;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);  /* Add some shadow for depth */
+    z-index: -1;
+    display: none;
+
+    /* Text-specific styles */
+    display: flex;                /* Enables flexible layout for alignment */
+    align-items: center;          /* Centers text vertically */
+    justify-content: center;      /* Centers text horizontally */
+    text-align: center;           /* Ensures multiline text is centered */
+    color: black;                 /* Text color */
+    font-size: 1.3rem;            /* Adjust font size to fit */
+    padding: 5px;      
+    font-family: Georgia, 'Times New Roman', Times, serif;/* Adds space around the text */
+    box-sizing: border-box;       /* Ensures padding doesn't affect width/height */
+    word-wrap: break-word;        /* Ensures long words break inside the box */
+    overflow: hidden;             /* Prevents text from spilling out */
+}
+
+.door {
+    transform-origin: right;
+    position: absolute;
+    width: 8%;
+    height: 15%;
+    background-color: #8B4513;
+    border: 3px solid #5F3A22;
+    bottom: 7%;
+    right: 0;
+    z-index: -1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: black;
+    font-size: 1.3rem;
+    padding: 10px 5px 70px 5px; /* Adjust padding-bottom to offset text from the bottom */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    overflow: hidden;
+
+    /* Add white border around text */
+    text-shadow: 1px 1px 2px white, 0 0 25px white, 0 0 5px darkgray;
+}
+
+#skyplatform{
+    position: absolute;
+    bottom: 42%;
+    left: 15%;
+    width: 50%;
+    height: 2%;
+    background: #808080;
+    /*transform: translateZ(0) scale(1.5);*/
+    /*box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);*/
+    display:none;
+}
+
+.door::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 20px;
+    background-color: #C0C0C0; /* Silver handle */
+    top: 50%;
+    left: 80%;
+    transform: translateY(-50%);
+}
+
+/* Keyframes for walking along X-axis */
+@keyframes walk-x-left-arm {
+    0%, 100% { transform: rotate(50deg) translateX(-6%); }
+    50% { transform: rotate(-50deg) translateX(-6%); }
+}
+
+@keyframes walk-x-right-arm {
+    0%, 100% { transform: rotate(-50deg) translateX(6%); }
+    50% { transform: rotate(50deg) translateX(6%); }
+}
+
+@keyframes walk-x-left-leg {
+    0%, 100% { transform: rotate(-35deg); }
+    50% { transform: rotate(35deg); }
+}
+
+@keyframes walk-x-right-leg {
+    0%, 100% { transform: rotate(35deg); }
+    50% { transform: rotate(-35deg); }
+}
+
+/* Animations for walking along X-axis */
+.walking-x .left-arm {
+    animation: walk-x-left-arm var(--animation-duration) infinite;
+}
+
+.walking-x .right-arm {
+    animation: walk-x-right-arm var(--animation-duration) infinite;
+}
+
+.walking-x .left-leg {
+    animation: walk-x-left-leg var(--animation-duration) infinite;
+}
+
+.walking-x .right-leg {
+    animation: walk-x-right-leg var(--animation-duration) infinite;
+}
+
+#textContainer {
+    position: absolute;
+    top: 2%; /* Adjust position as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    z-index: 1000; /* Ensure it's above other elements */
+  }
+  #textLevelDetails{
+    position: absolute;
+    top: 2%; /* Adjust position as needed */
+    left: 10%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    z-index: 1000; /* Ensure it's above other elements */
+    pointer-events: all;
+  }
+  #wall {
+    position: absolute;
+    width: 76px;
+    height: 215px;
+    background-color: #808080;
+    left: 46.6%; /* Example X-coordinate */
+    bottom: 7%;  /* Example Y-coordinate */
+    display:none;
+  }
+
+.message {
+    background-color: rgba(255, 0, 0, 0.8); /* Red with transparency */
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    z-index: 1000;
+    opacity: 1;
+    transition: opacity 1s ease-out;
+}

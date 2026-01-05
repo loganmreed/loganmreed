@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obstacle Frenzy</title>
+    <link rel="stylesheet" href="ObstacleFrenzyStyles.css">
+    <style>
+        :root {
+            --container-width: 80%;
+            --container-max-width: 500px;
+            --container-padding: 5%;
+            --item-padding: 2%;
+            --item-font-size: 1.5em;
+        }
+        @media (max-width: 600px) {
+            :root {
+                --container-width: 90%;
+                --container-padding: 4%;
+                --item-padding: 3%;
+                --item-font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="leaderboard" style="display: none;"></div>
+    <div id="startMenu" class="start-menu">
+        <h1>Obstacle Frenzy</h1>
+        <div id="controls" class="controls-display">
+            <h2>Controls</h2>
+            <ul>
+                <li>Up Arrow: Jump</li>
+                <li>Down Arrow: Crouch</li>
+                <li>Left/Right Arrows: Toggle Flip</li>
+            </ul>
+            <div id="themeCustomizer" class="theme-customizer">
+                <h2>Theme Customizer</h2>
+                <label for="themeSelect">Choose a theme:</label>
+                <select id="themeSelect">
+                    <option value="default">Default</option>
+                    <option value="dark">Dark</option>
+                    <option value="space">Space</option>
+                    <option value="forest">Forest</option>
+                </select>
+            </div>            
+        </div>
+        <div class="button-row">
+            <button id="easyButton">Easy</button>
+            <button id="mediumButton">Medium</button>
+            <button id="hardButton">Hard</button>
+        </div>
+    </div>
+    <div id="mobileControls" class="mobile-controls" style="display: none;">
+        <button id="rightButton">Flip</button>
+        <div id="joystick">
+            <div id="joystickHandle"></div>
+        </div>
+    </div>    
+    <div class="floor"></div>
+    <div class="ceiling"></div>
+    <div class="pause-text">Game Paused</div>
+    <div class="score" id="score">Score: 0</div>
+    <div class="name" id="name">By Logan Reed</div>
+    <div class="game-over-popup" id="gameOverPopup">
+        <h1>Game Over</h1>
+        <button id="restartButton">Restart</button>
+    </div>    
+    <div class="player">
+        <div class="eye left-eye">
+            <div class="pupil left-pupil"></div>
+        </div>
+        <div class="eye right-eye">
+            <div class="pupil right-pupil"></div>
+        </div>
+    </div>
+        
+    <script src="ObstacleFrenzyGame.js"></script>
+</body>
+</html>
