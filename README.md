@@ -25,12 +25,9 @@
 
 * [Statistical Probability Simulator](./DiceRoller) - C++ simulation engine used to analyze random distribution and frequency data.
 
+### Contacts
 
+LinkedIn: [www.linkedin.com/in/logan-reed-4808ab2a1](www.linkedin.com/in/logan-reed-4808ab2a1)
+Email: [LoganReed515@gmail.com](mailto:LoganReed515@gmail.com)
 
-
-
-
-LinkedIn: www.linkedin.com/in/logan-reed-4808ab2a1
-
-Email: LoganReed515@gmail.com
 Current Goal: Seeking Fall 2026 Software Development Internships.
