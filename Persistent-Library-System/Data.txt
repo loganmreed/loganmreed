@@ -1,0 +1,7 @@
+Total Books: 59
+Books Checked Out: 2
+Books Added: 59
+Books Deleted: 0
+Total Users: 21
+Users Deleted: 0
+Books Borrowed: 0
