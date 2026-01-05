@@ -1,0 +1,56 @@
+#ifndef PERSON_H
+#define PERSON_H
+
+//#include "Pet.h"
+#include "Address.h"
+#include <iostream>
+#include <string>
+#include <vector>
+#include <algorithm>
+#include <cctype>
+#include "Pet.h"
+#include "Date.h"
+
+class Pet;
+
+class Person{
+    friend void operator+(std::vector<Pet*>&, Pet*);
+    friend void operator-(std::vector<Pet*>&, const std::string&);
+    friend std::ostream& operator<<(std::ostream&, Person&);
+    friend std::istream& operator>>(std::istream&, Person&);
+
+    private:
+        std::string fName;
+        std::string lName;
+        Address address;
+        std::vector<Pet*> pets;
+
+    public:
+        Person();
+        Person(const std::string& firstName, const std::string& lastName, const Address& address);
+        Person(const std::string& firstName, const std::string& lastName);
+
+        std::string getFirstName();
+        std::string getLastName();
+        Address& getAddress();
+        std::vector<Pet*>& getPets();
+
+        void setFirstName(const std::string&);
+        void setLastName(const std::string&);
+        void setAddress(const Address&);
+        void setStreetName(const std::string&);
+        void setCityName(const std::string&);
+        void setStateName(const std::string&);
+        void setZipCode(const size_t&);
+
+        bool searchPet(const std::string&);
+
+        void addPet();
+        void deletePet();
+        std::string trim(const std::string&);
+};
+
+void operator+(std::vector<Pet*>&, Pet*);
+void operator-(std::vector<Pet*>&, const std::string&);
+
+#endif

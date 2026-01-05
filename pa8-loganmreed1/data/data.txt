@@ -1,0 +1,38 @@
+John Jones,22,UCD,Engineering,813
+HW1,15/20
+HW2,22/25
+HW3,18/20
+M1,47/50
+P1,42/50
+
+Sara Smith,19,Metro State,Engineering,805
+HW1,14/20
+HW2,17/25
+HW3,16/20
+M1,42/50
+P1,44/50
+
+Donald Taylor,24,UCD,Architecture,1099
+HW1,12.5/20
+HW2,20/25
+HW3,14.5/20
+HW4,20/40
+M1,42/50
+M2,32/50
+P1,25.5/50
+
+Paul Davis,28,Metro State,Management,427
+HW1,12/20
+HW2,14/25
+HW3,10/20
+M1,12.5/50
+P1,45.5/50
+P2,40.7/70
+
+Susan Miller,22,UCD,Management,567
+HW1,15/20
+HW2,18.5/25
+HW3,19/20
+M1,38/50
+P1,35/50
+P2,55.6/70
