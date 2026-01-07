@@ -1,9 +1,8 @@
-- Python (52.8%): Focused on State-Machine Logic, Graph Traversal (BFS), and Multi-framework Integration (Pygame + Tkinter).
+- Python (50.9%): Focused on State-Machine Logic, Graph Traversal (BFS), and Multi-framework Integration (Pygame + Tkinter).
 
-- C++ (30%): Focused on High-Performance Architecture, Memory Management, and Advanced Data Structures (Heaps, BSTs, Hash Tables).
+- C++ (32.6%): Focused on High-Performance Architecture, Memory Management, and Advanced Data Structures (Heaps, BSTs, Hash Tables).
 
-- Web Stack (17.2%): Full-stack development using JavaScript, HTML5, and CSS3 for real-time browser-based applications and game loops.
-
+- Web Stack (16.5%): Full-stack development using JavaScript, HTML5, and CSS3 for real-time browser-based applications and game loops.
 
 ### Project navigation
 
