@@ -7,6 +7,8 @@
 
 ### Project navigation
 
+* [Sentinel-Node: Cross-Platform Monitor](CrossPlatformMonitor) - Advanced C++ systems tool using conditional compilation for Windows/Linux kernels.
+  
 * [Library Management System](./Persistent-Library-System) - Professional C++ Architecture
 
 * [Survival Snake Roguelite](./UpgradeSnake) -  Multi-framework Python Game
