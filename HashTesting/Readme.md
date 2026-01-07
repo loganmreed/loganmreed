@@ -1,4 +1,5 @@
-Scalable Hash Table with Quadratic Probing
+# Scalable Hash Table with Quadratic Probing
+
 This project is an exploration of high-efficiency data mapping. It began as a static implementation of a Hash Table using Quadratic
 Probing and evolved into a Dynamic Hash Map capable of real-time resizing (Rehashing).
 
