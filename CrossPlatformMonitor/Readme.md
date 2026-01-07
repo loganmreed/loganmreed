@@ -12,7 +12,8 @@ A lightweight, cross-platform C++ system monitoring utility designed for real-ti
 - Live Dashboard: Uses ANSI escape codes to provide a flicker-free, refreshing terminal UI.
 
 # Project Structure
-* CPU: This class handles system time snapshots and calculates utilization percentage.
+- CPU: This class handles system time snapshots and calculates utilization percentage.
+  
 ```text
 +----------------------------------------+
 |                 CPU                    |
@@ -38,7 +39,8 @@ A lightweight, cross-platform C++ system monitoring utility designed for real-ti
 | + updateTimes()                        |
 +----------------------------------------+
 ```
-* Memory: This retrieves RAM load and checks for critical thresholds.
+- Memory: This retrieves RAM load and checks for critical thresholds.
+  
 ```text
 +--------------------------------+
 |             Memory             |
@@ -50,7 +52,8 @@ A lightweight, cross-platform C++ system monitoring utility designed for real-ti
 | + critLod(): bool              |
 +--------------------------------+
 ```
-* Disc: This queries filesystem statistics for available storage.
+- Disc: This queries filesystem statistics for available storage.
+
 ```text
 +------------------------------+
 |             disc             |
@@ -61,7 +64,8 @@ A lightweight, cross-platform C++ system monitoring utility designed for real-ti
 | + getfreeDGB(): double       |
 +------------------------------+
 ```
-* Uptime: This manages system boot time and identifies the Operating System.
+- Uptime: This manages system boot time and identifies the Operating System.
+
 ```text
 +----------------------------------+
 |             uptime               |
