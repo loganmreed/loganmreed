@@ -1,9 +1,9 @@
-##Cross-Platform Embedded System Monitor
+## Cross-Platform Embedded System Monitor
 
 A lightweight, cross-platform C++ system monitoring utility designed for real-time tracking of hardware resources. It provides a terminal-based dashboard for CPU utilization, memory load, disk availability, and system uptime.
 
 
-#Features
+# Features
 - Cross-Platform Support: Works on both Windows (Win32 API) and Linux (procfs/sysinfo).
 - Real-time CPU Tracking: Calculates CPU usage percentage based on delta time between system ticks.
 - Memory Monitoring: Tracks physical memory load and includes a built-in "Critical Load" warning (triggered at 95%).
