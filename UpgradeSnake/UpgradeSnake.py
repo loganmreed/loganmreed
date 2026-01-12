@@ -262,7 +262,7 @@ def buy_upgrade(key, labels):
             SCREEN_SIZE = GRID_SIZE * CELL_SIZE
             screen = pygame.display.set_mode((SCREEN_SIZE, SCREEN_SIZE + 60))
     if key == "slower_snake":
-        labels[key]["preferred"].config(text=f"Play Speed: {u['preferred']:.2f}")
+        labels[key]["preferred"].config(text=f"{u['preferred']:.2f}")
 
     curr_display = f"{u['current']:.2f}" if key != "plus_length" else u["purchases"]
     labels[key]["current"].config(text=curr_display)
