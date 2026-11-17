@@ -6,6 +6,9 @@
 
 ### Project navigation
 
+
+* [Vault Rat Finance](www.m-reed.com/vaultrat/) - Full banking tracking tool JavaScript, HTML, CSS, PHP, SQL. It is built to help people track spending and to save money without linking bank accounts or paying subscription fees. It took 2 months to make and the finished product is 43 files and over 10,000 lines of code. 
+
 * [Sentinel-Node: Cross-Platform Monitor](CrossPlatformMonitor) - Advanced C++ systems tool using conditional compilation for Windows/Linux kernels.
   
 * [Library Management System](./Persistent-Library-System) - Professional C++ Architecture
