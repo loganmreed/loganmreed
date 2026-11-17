@@ -35,4 +35,4 @@
 
 * Email: [LoganReed515@gmail.com](mailto:LoganReed515@gmail.com)
 
-Current Goal: Seeking Fall 2026 Software Development Internships.
+Current Goal: Seeking Software Development Internships & jobs.
